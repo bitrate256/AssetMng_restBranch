@@ -1,7 +1,7 @@
 // board.service.ts
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-// import { ApiValidationService } from './common/api-validation.service';
+import { ApiValidationService } from './common/api-validation.service';
 import { Assets } from 'src/app/model/board/Assets';
 import { ApiReponseList } from 'src/app/model/common/ApiReponseList';
 
@@ -10,8 +10,8 @@ import { ApiReponseList } from 'src/app/model/common/ApiReponseList';
 })
 export class BoardService {
 
-  constructor(private http: HttpClient
-  //             private apiValidationService: ApiValidationService
+  constructor(private http: HttpClient,
+              private apiValidationService: ApiValidationService
   ) {}
 
   // private getBoardUrl = '/api/v1/board';
@@ -21,7 +21,7 @@ export class BoardService {
     const getAssetsUrl = this.getBoardUrl;
     return this.http.get<ApiReponseList>(getAssetsUrl)
       .toPromise()
-      // .then(this.apiValidationService.validateResponse)
+      .then(this.apiValidationService.validateResponse)
       .then(response => {
         return response.list as Assets[];
       })

@@ -21,9 +21,12 @@ interface AssetType {
 export class BoardComponent implements OnInit {
 
   assets: Assets[] = [
-    { assetNo: 'BNO_0001_T', assetTypeCode: '테이블', userName: '홍길동', assetModelName: '테이블1', assetSerialNo: '1111', useStartDate: new Date(), assetStat: '정상', assetPjtLoc: '본사', etc: '비고내용', regDate: new Date()},
-    { assetNo: 'BNO_0002_N', assetTypeCode: '노트북', userName: '홍길동', assetModelName: 'ASUS X412F', assetSerialNo: '1111', useStartDate: new Date(), assetStat: '입고', assetPjtLoc: '본사', etc: '비고내용', regDate: new Date()},
-    { assetNo: 'BNO_0003_M', assetTypeCode: '모니터', userName: '홍길동', assetModelName: 'SAMSUNG XXX', assetSerialNo: '1111', useStartDate: new Date(), assetStat: '수리완료', assetPjtLoc: '본사', etc: '비고내용', regDate: new Date()}
+// tslint:disable-next-line:max-line-length
+//    { assetNo: 'BNO_0001_T', assetTypeCode: '테이블', userName: '홍길동', assetModelName: '테이블1', assetSerialNo: '1111', useStartDate: new Date(), assetStat: '정상', assetPjtLoc: '본사', etc: '비고내용', regDate: new Date()},
+// tslint:disable-next-line:max-line-length
+//    { assetNo: 'BNO_0002_N', assetTypeCode: '노트북', userName: '홍길동', assetModelName: 'ASUS X412F', assetSerialNo: '1111', useStartDate: new Date(), assetStat: '입고', assetPjtLoc: '본사', etc: '비고내용', regDate: new Date()},
+// tslint:disable-next-line:max-line-length
+//    { assetNo: 'BNO_0003_M', assetTypeCode: '모니터', userName: '홍길동', assetModelName: 'SAMSUNG XXX', assetSerialNo: '1111', useStartDate: new Date(), assetStat: '수리완료', assetPjtLoc: '본사', etc: '비고내용', regDate: new Date()}
   ];
   displayedColumns: string[] = ['assetNo', 'assetTypeCode', 'userName', 'assetModelName', 'assetSerialNo', 'useStartDate', 'assetStat', 'assetPjtLoc', 'etc', 'regDate'];
   // boardName: string;
